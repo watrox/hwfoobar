@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Book</title>
+    </head>
+    <body>
+        <p th:text="${book.id}"    >id    </p>
+        <p th:text="${book.title}" >title </p>
+        <p th:text="${book.author}">author</p>
+        <p th:text="${book.price}" >price </p>
+        <a th:href="@{/{id}/edit(id=${book.id})}">Edit</a>
+        <form th:action="@{/{id}(id=${book.id})}" th:method="delete">
+            <input type="submit" value="DEL"/>
+        </form>
+    </body>
+</html>
