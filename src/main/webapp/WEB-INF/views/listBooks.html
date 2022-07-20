@@ -1,30 +1,45 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 	<head>
     	<title>List books</title>
+    	<link rel="stylesheet" type="text/css" href="css/myStyle.css"/>
+    	<link rel="stylesheet" type="text/css" href="css/tableStyle.css"/>
 	</head>
 	<body>
-		<table>
-    	    <thead>
-		        <tr>
-		            <th> ID </th>
-		            <th> Title </th>
-		            <th> Author </th>
-		            <th> Price </th>
-		        </tr>
-		    </thead>
-		    <tbody>
-		      <tr th:if="${allBooks.empty}">
-	            <td colspan="2"> No Books Available </td>
-	          </tr>
-	          <tr th:each="book : ${allBooks}">
-	            <td><span th:text="${book.id}">      id    </span></td>
-                <td><span th:text="${book.title}">  Title  </span></td>
-                <td><span th:text="${book.author}"> Author </span></td>
-	            <td><span th:text="${book.price}">  Title  </span></td>
-                <td><a th:href="@{/{id}/(id=${book.id})}">Show</a></td>
-                
-              </tr>
-		    </tbody>
-		</table>
+       <div class="container">
+            <h1>Books store <span>and library</span></h1>
+	    	<div style="height: 50px;"></div>
+            <div class="content">
+                <ul class="bmenu">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Show books</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+             </div>
+	        <div class="table">
+				<table>
+		    	    <thead>
+				        <tr>
+				            <th> ID </th>
+				            <th> Title </th>
+				            <th> Author </th>
+				            <th> Price </th>
+				        </tr>
+				    </thead>
+				    <tbody>
+				      <tr th:if="${allBooks.empty}">
+			            <td colspan="2"> No Books Available </td>
+			          </tr>
+			          <tr th:each="book : ${allBooks}">
+			            <td><span th:text="${book.id}">      id    </span></td>
+		                <td><span th:text="${book.title}">  Title  </span></td>
+		                <td><span th:text="${book.author}"> Author </span></td>
+			            <td><span th:text="${book.price}">  Title  </span></td>
+		                <td><a th:href="@{/{id}/(id=${book.id})}">Show</a></td>
+		                
+		              </tr>
+				    </tbody>
+				</table>
+			</div>
+		</div>
     </body>
 </html>

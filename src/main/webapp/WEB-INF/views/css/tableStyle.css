@@ -1,0 +1,37 @@
+.table{
+  width: 600px;
+  margin: 20 20;
+  float: left;
+  
+  border-radius: 50px;
+  border: 50px solid #fff;	
+}
+
+#books {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 600px;
+  color: black;
+  
+  margin: 0;
+  border: 2px solid #000;
+}
+
+#books td, #books th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#books tr:nth-child(even){background-color: #f2f2f2;}
+
+#books tr:nth-child(odd){background-color: #eee;}
+
+#books tr:hover {background-color: #ccc;}
+
+#books th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #ffb266;
+  
+}

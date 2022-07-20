@@ -41,7 +41,7 @@ public class BookDaoImpl implements BookDao{
 		ResultSet rs;
 		List<Book> allBooks = new ArrayList<Book>();
 		
-		if (connection == null || !this.isMsqlDriverLoaded)
+		if (connection == null || !BookDaoImpl.isMsqlDriverLoaded)
 			return null;
 		
 		try {
@@ -67,7 +67,7 @@ public class BookDaoImpl implements BookDao{
 		ResultSet rs;
 		Book book = null;
 		
-		if (connection == null || !this.isMsqlDriverLoaded)
+		if (connection == null || !BookDaoImpl.isMsqlDriverLoaded)
 			return null;
 		
 		try {
@@ -88,7 +88,7 @@ public class BookDaoImpl implements BookDao{
 	}
 	
 	public void addBook(Book book) {
-		if (connection == null || !this.isMsqlDriverLoaded)
+		if (connection == null || !BookDaoImpl.isMsqlDriverLoaded)
 			return;
 		
 		try {
@@ -105,7 +105,7 @@ public class BookDaoImpl implements BookDao{
 	}
 	
 	public void removeBook (Long id) {
-		if (connection == null || !this.isMsqlDriverLoaded)
+		if (connection == null || !BookDaoImpl.isMsqlDriverLoaded)
 			return;
 		
 		try {
@@ -119,7 +119,7 @@ public class BookDaoImpl implements BookDao{
 	};
 	
 	public void updateBook (Book book) {
-		if (connection == null || !this.isMsqlDriverLoaded)
+		if (connection == null || !BookDaoImpl.isMsqlDriverLoaded)
 			return;
 		
 		try {
@@ -135,7 +135,7 @@ public class BookDaoImpl implements BookDao{
 	};
 
 	public int getBooksCount() {
-		if (connection == null || !this.isMsqlDriverLoaded)
+		if (connection == null || !BookDaoImpl.isMsqlDriverLoaded)
 			return 0;
 		
 		try {
