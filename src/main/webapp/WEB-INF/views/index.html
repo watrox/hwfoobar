@@ -1,9 +1,20 @@
-<html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<link href="/css/mainStyle.css"  rel="stylesheet" type="text/css"/>
+	</head>
 	<body>
-		<h2>We are closed for maintenance, sowwy(</h2>
-		
-		<a href="/listBooks">Books</a>
-		<br/>
-		<a href="/addBook">Add new book</a>
+		<div class="container">
+            <h1>Books store <span>and library</span></h1>
+	    	<div style="height: 50px;"></div>
+            <div class="content">
+                <ul class="bmenu">
+                    <li><a href="#">About</a></li>
+                    <li><a href="/listBooks">Show books</a></li>
+                    <li><a href="/addBook">Add new book</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+             </div>
+		</div>
 	</body>
 </html>

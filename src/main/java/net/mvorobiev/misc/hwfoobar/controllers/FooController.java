@@ -75,5 +75,10 @@ public class FooController {
 	public String deleteBookP (@PathVariable Long id) {
 		this.bookService.deleteBook(id);
 		return "redirect:/listBooks";
+	} 
+	
+	@GetMapping("/resources/css/ccc.css")
+	public String getStaticResource() {
+		return "resources/css/ccc.css";
 	}
 }

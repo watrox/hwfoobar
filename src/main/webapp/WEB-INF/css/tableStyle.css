@@ -4,7 +4,9 @@
   float: left;
   
   border-radius: 50px;
-  border: 50px solid #fff;	
+  border: 50px solid #fff;
+  
+  font-size: 15px;	
 }
 
 #books {
@@ -34,4 +36,8 @@
   text-align: left;
   background-color: #ffb266;
   
+}
+
+#books th a {
+	color: black;
 }

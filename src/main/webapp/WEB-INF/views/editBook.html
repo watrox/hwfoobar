@@ -3,22 +3,27 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Add book</title>
+		<link href="/css/mainStyle.css"  rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
-	   <form method="post" th:action="@{/{id}(id=${book.id})}" th:object="${book}" >
-           <label for="id">id</label>
-           <input type="text" th:field="*{id}" id="id"/>
-           <br/>
-           <label for="title">Book title</label>
-           <input type="text" th:field="*{title}" id="title"/>
-           <br/>
-           <label for="price">Book author</label>
-           <input type="text" th:field="*{author}" id="author"/>
-           <br/>
-           <label for="price">Book price</label>
-           <input type="text" th:field="*{price}" id="price"/>
-           <br/>
-           <input type="submit" value="Edit book"/>
-       </form>
+       <div class="container">
+           <h1>Books store <span>and library</span></h1>
+	    	<div style="height: 50px;"></div>
+	 		<form method="post" th:action="@{/{id}(id=${book.id})}" th:object="${book}" >
+	           <label for="id">id</label>
+	           <input type="text" th:field="*{id}" id="id"/>
+	           <br/>
+	           <label for="title">Book title</label>
+	           <input type="text" th:field="*{title}" id="title"/>
+	           <br/>
+	           <label for="price">Book author</label>
+	           <input type="text" th:field="*{author}" id="author"/>
+	           <br/>
+	           <label for="price">Book price</label>
+	           <input type="text" th:field="*{price}" id="price"/>
+	           <br/>
+	           <input type="submit" value="Edit book"/>
+	       </form>
+		</div>
 	</body>
 </html>

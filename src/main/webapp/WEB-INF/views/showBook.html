@@ -2,15 +2,34 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>Book</title>
-    </head>
+		<link href="/css/mainStyle.css"  rel="stylesheet" type="text/css"/>
+		<link href="/css/tableStyle.css" rel="stylesheet" type="text/css"/>
+     </head>
     <body>
-        <p th:text="${book.id}"    >id    </p>
-        <p th:text="${book.title}" >title </p>
-        <p th:text="${book.author}">author</p>
-        <p th:text="${book.price}" >price </p>
-        <a th:href="@{/{id}/edit(id=${book.id})}">Edit</a>
-        <form th:action="@{/{id}(id=${book.id})}" th:method="delete">
-            <input type="submit" value="DEL"/>
-        </form>
+       <div class="container">
+            <h1>Books store <span>and library</span></h1>
+	    	<div style="height: 50px;"></div>
+            <div class="content">
+                <ul class="bmenu">
+                    <li><a href="/"         >About</a></li>
+                    <li><a href="/listBooks">Show books</a></li>
+                    <li><a href="#"         >Contact</a></li>
+                </ul>
+  			</div>
+		    <div class="table">
+		    	<table id="books">
+		    		<tbody>
+		    			<tr><td>id</td><td><p th:text="${book.id}"    >id    </p></td></tr>
+		    			<tr><td>title</td><td><p th:text="${book.title}" >title </p></td></tr>
+		    			<tr><td>author</td><td><p th:text="${book.author}">author</p></td></tr>
+		    			<tr><td>price</td><td><p th:text="${book.price}" >price </p></td></tr>
+		    		</tbody>
+		    	</table>
+		        <a th:href="@{/{id}/edit(id=${book.id})}">Edit</a>
+		        <form th:action="@{/{id}(id=${book.id})}" th:method="delete">
+		            <input type="submit" value="DEL"/>
+		        </form>
+		    </div>
+		</div>
     </body>
 </html>
